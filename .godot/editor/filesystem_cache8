@@ -1,10 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697919170
+::res://::1697924717
+GameManager.gd::GDScript::-1::1697924717::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::8097338375600203794::1697917652::1697919110::1::::<><>::
 README.md::TextFile::-1::1697917652::0::1::::<><>::
+test_scene.tscn::PackedScene::5706144385823860921::1697924723::0::1::::<><>::res://_Scripts/GameManager.gd
 ::res://addons/::1697919314
-::res://addons/microgamejamcontroller/::28800
+::res://addons/microgamejamcontroller/::1697919328
 gdachan101.png::CompressedTexture2D::6598500715891477301::1659919450::1697919328::1::::<><>::
 MicrogameJamController.gd::GDScript::-1::1695076484::0::1::::<>Node<>::
 MicrogameJamControllerEditor.gd::GDScript::-1::1695349968::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1695349950::0::1::::<><>::
+::res://scripts/::0
+::res://_Scripts/::1697924717
+GameManager.gd::GDScript::-1::1697922856::0::1::::<>Node<>::

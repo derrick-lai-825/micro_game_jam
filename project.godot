@@ -11,12 +11,18 @@ config_version=5
 [application]
 
 config/name="Microgame Jam"
+run/main_scene="res://test_scene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 MicrogameJamController="*res://addons/microgamejamcontroller/MicrogameJamController.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
 
 [editor_plugins]
 
