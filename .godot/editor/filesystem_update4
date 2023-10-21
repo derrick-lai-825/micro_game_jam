@@ -1,0 +1,8 @@
+res://CharacterBody2D.gd
+res://node_2d.tscn
+res://Area2D.gd
+res://node_2d.gd
+res://testitem.tscn
+res://Timer.gd
+res://Sprite2D.gd
+res://Remover.gd
