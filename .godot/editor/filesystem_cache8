@@ -1,4 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< HEAD
 ::res://::1697924717
 GameManager.gd::GDScript::-1::1697924717::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::8097338375600203794::1697917652::1697919110::1::::<><>::
@@ -13,3 +14,15 @@ plugin.cfg::TextFile::-1::1695349950::0::1::::<><>::
 ::res://scripts/::0
 ::res://_Scripts/::1697924717
 GameManager.gd::GDScript::-1::1697922856::0::1::::<>Node<>::
+=======
+::res://::1697925352
+icon.svg::CompressedTexture2D::8097338375600203794::1697915667::1697915791::1::::<><>::
+README.md::TextFile::-1::1697915667::0::1::::<><>::
+CharacterBody2D.gd::GDScript::-1::1697920333::0::1::::<>CharacterBody2D<>::
+node_2d.tscn::PackedScene::8402621534872437658::1697925352::0::1::::<><>::res://CharacterBody2D.gd<>res://node_2d.gd<>uid://dnmn8k5k5v3vq::::res://icon.svg<>res://Area2D.gd<>res://Timer.gd
+node_2d.gd::GDScript::-1::1697924417::0::1::::<>Node2D<>::
+Area2D.gd::GDScript::-1::1697923787::0::1::::<>Area2D<>::
+Sprite2D.gd::GDScript::-1::1697925416::0::1::::<>Sprite2D<>::
+testitem.tscn::PackedScene::1812708111453092861::1697925427::0::1::::<><>::uid://dnmn8k5k5v3vq::::res://icon.svg<>res://Sprite2D.gd
+Timer.gd::GDScript::-1::1697925352::0::1::::<>Timer<>::
+>>>>>>> 9270e6dcdafafaf170726e9901bb35faaf43736c
