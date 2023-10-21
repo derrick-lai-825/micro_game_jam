@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://node_2d.gd" id="1_uodgh"]
 [ext_resource type="Texture2D" uid="uid://dnmn8k5k5v3vq" path="res://icon.svg" id="2_rgcjx"]
 [ext_resource type="Script" path="res://Area2D.gd" id="4_0iulq"]
-[ext_resource type="Script" path="res://Timer.gd" id="5_yko7o"]
+[ext_resource type="Script" path="res://BoltsManager.gd" id="5_yko7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8aaxd"]
 size = Vector2(102, 96)

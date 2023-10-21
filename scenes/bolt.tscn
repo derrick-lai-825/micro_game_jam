@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c22gj14honkar"]
+
+[ext_resource type="Texture2D" uid="uid://b31os86lhgj3f" path="res://art/bolt.png" id="1_ge21m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t4lib"]
+radius = 55.0091
+
+[node name="bolt" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.08559
+texture = ExtResource("1_ge21m")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_t4lib")

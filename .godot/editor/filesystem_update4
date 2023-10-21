@@ -1,5 +1,8 @@
-res://GameManager.gd
 res://test_scene.tscn
-res://CharacterBody2D.gd
-res://scripts/GameManager.gd
 res://node_2d.gd
+res://scripts/GameManager.gd
+res://Timer.gd
+res://BoltsManager.gd
+res://scenes/main.tscn
+res://scripts/BoltsManager.gd
+res://scenes/bolt.tscn
