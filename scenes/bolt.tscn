@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b31os86lhgj3f" path="res://art/bolt.png" id="1_ge21m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4lib"]
-radius = 55.0091
+radius = 116.017
 
 [node name="bolt" type="Node2D"]
 metadata/_edit_group_ = true

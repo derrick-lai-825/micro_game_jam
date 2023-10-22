@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnkdmngwtdn1j"]
+
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_lk7go"]
+[ext_resource type="Script" path="res://scripts/BoltsManager.gd" id="2_1hj1a"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Game Manager" type="Node" parent="."]
+script = ExtResource("1_lk7go")
+conveyer_speed = 500.0
+
+[node name="Bolt Manager" type="Node" parent="Game Manager"]
+script = ExtResource("2_1hj1a")
+spawn_pos = Vector2(-500, 50)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Game Manager"]
+
+[node name="Timer" type="Timer" parent="Game Manager"]
+
+[connection signal="timeout" from="Game Manager/Timer" to="Game Manager/Bolt Manager" method="Spawn"]

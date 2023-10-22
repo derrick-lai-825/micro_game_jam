@@ -1,23 +1,24 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697929071
-Area2D.gd::GDScript::-1::1697925900::0::1::::<>Area2D<>::
-CharacterBody2D.gd::GDScript::-1::1697925900::0::1::::<>CharacterBody2D<>::
-icon.svg::CompressedTexture2D::8097338375600203794::1697917652::1697927010::1::::<><>::
-node_2d.gd::GDScript::-1::1697927252::0::1::::<>Node2D<>::
-node_2d.tscn::PackedScene::8402621534872437658::1697927542::0::1::::<><>::res://CharacterBody2D.gd<>res://node_2d.gd<>uid://dnmn8k5k5v3vq
-README.md::TextFile::-1::1697917652::0::1::::<><>::
-Remover.gd::GDScript::-1::1697925900::0::1::::<>Sprite2D<>::
-testitem.tscn::PackedScene::347513193851050579::1697925900::0::1::::<><>::uid://dnmn8k5k5v3vq
-::res://addons/::1697919314
-::res://addons/microgamejamcontroller/::1697919328
-gdachan101.png::CompressedTexture2D::6598500715891477301::1659919450::1697919328::1::::<><>::
-MicrogameJamController.gd::GDScript::-1::1695076484::0::1::::<>Node<>::
-MicrogameJamControllerEditor.gd::GDScript::-1::1695349968::0::1::::<>EditorPlugin<>::
-plugin.cfg::TextFile::-1::1695349950::0::1::::<><>::
-::res://art/::1697929071
-bolt.png::CompressedTexture2D::4406266091021463457::1697929068::1697929071::1::::<><>::
-::res://scenes/::1697929071
-main.tscn::PackedScene::5706144385823860921::1697928575::0::1::::<><>::res://scripts/GameManager.gd<>res://scripts/BoltsManager.gd
-::res://scripts/::1697928622
-BoltsManager.gd::GDScript::-1::1697928544::0::1::::<>Node<>::
-GameManager.gd::GDScript::-1::1697928017::0::1::::<>Node<>::
+::res://::1697960616
+icon.svg::CompressedTexture2D::8097338375600203794::1697940437::1697940450::1::::<><>::
+README.md::TextFile::-1::1697940437::0::1::::<><>::
+::res://addons/::1697940437
+::res://addons/microgamejamcontroller/::1697940437
+gdachan101.png::CompressedTexture2D::6598500715891477301::1697940437::1697940437::1::::<><>::
+MicrogameJamController.gd::GDScript::-1::1697940437::0::1::::<>Node<>::
+MicrogameJamControllerEditor.gd::GDScript::-1::1697940437::0::1::::<>EditorPlugin<>::
+plugin.cfg::TextFile::-1::1697940437::0::1::::<><>::
+::res://art/::1697962615
+0392959a2afab47ebbf9b4f50bdd95d1.jpg::CompressedTexture2D::7069073420318171690::1697962615::1697962615::1::::<><>::
+bolt.png::CompressedTexture2D::4406266091021463457::1697940437::1697940437::1::::<><>::
+fridge bot_0.png::CompressedTexture2D::545247526486641931::1697959504::1697959507::1::::<><>::
+fridge bot_1.png::CompressedTexture2D::6403583948127859926::1697959504::1697959507::1::::<><>::
+::res://scenes/::1697962564
+bolt.tscn::PackedScene::6724060129818144289::1697962564::0::1::::<><>::uid://b31os86lhgj3f::::res://art/bolt.png
+main.tscn::PackedScene::5706144385823860921::1697962564::0::1::::<><>::res://scripts/CameraManager.gd<>res://scripts/GameManager.gd<>res://scripts/BoltsManager.gd<>res://scripts/InputManager.gd<>uid://h1efabupseut::::res://art/fridge bot_0.png<>res://scripts/Bot.gd<>uid://cxh7den7gljus::::res://art/fridge bot_1.png
+::res://scripts/::1697962563
+BoltsManager.gd::GDScript::-1::1697962563::0::1::::<>Node<>::
+Bot.gd::GDScript::-1::1697961890::0::1::::<>Node2D<>::
+CameraManager.gd::GDScript::-1::1697953129::0::1::::<>Node2D<>::
+GameManager.gd::GDScript::-1::1697962513::0::1::::<>Node<>::
+InputManager.gd::GDScript::-1::1697959061::0::1::::<>Node2D<>::

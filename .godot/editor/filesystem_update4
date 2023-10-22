@@ -1,8 +1,10 @@
-res://test_scene.tscn
-res://node_2d.gd
-res://scripts/GameManager.gd
-res://Timer.gd
-res://BoltsManager.gd
 res://scenes/main.tscn
-res://scripts/BoltsManager.gd
+res://node_2d.gd
 res://scenes/bolt.tscn
+res://scripts/BoltsManager.gd
+res://scenes/InputManager.gd
+res://scenes/CameraManager.gd
+res://scripts/GameManager.gd
+res://scenes/bolt.gd
+res://scripts/Bot.gd
+res://scripts/CameraManager.gd

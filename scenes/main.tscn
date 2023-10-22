@@ -1,11 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnkdmngwtdn1j"]
+[gd_scene load_steps=10 format=3 uid="uid://cnkdmngwtdn1j"]
 
+[ext_resource type="Texture2D" uid="uid://c7ykuvbbxkmry" path="res://art/0392959a2afab47ebbf9b4f50bdd95d1.jpg" id="1_7ks4s"]
+[ext_resource type="Script" path="res://scripts/CameraManager.gd" id="1_37vpm"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_lk7go"]
 [ext_resource type="Script" path="res://scripts/BoltsManager.gd" id="2_1hj1a"]
+[ext_resource type="Script" path="res://scripts/InputManager.gd" id="4_82pw2"]
+[ext_resource type="Texture2D" uid="uid://h1efabupseut" path="res://art/fridge bot_0.png" id="5_2y8p8"]
+[ext_resource type="Script" path="res://scripts/Bot.gd" id="5_yj6yf"]
+[ext_resource type="Texture2D" uid="uid://cxh7den7gljus" path="res://art/fridge bot_1.png" id="7_d7gj5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsy5y"]
+size = Vector2(0.221902, 20)
 
 [node name="Main" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+scale = Vector2(1.54261, 1.54261)
+texture = ExtResource("1_7ks4s")
+
+[node name="Camera Manager" type="Node2D" parent="."]
+script = ExtResource("1_37vpm")
+NOISE_SHAKE_STRENGTH = Array[float]([10.0, 30.0, 60.0])
+
+[node name="Camera2D" type="Camera2D" parent="Camera Manager"]
+
+[node name="Line2D" type="Line2D" parent="Camera Manager/Camera2D"]
+points = PackedVector2Array(0, 270, 0, -270)
 
 [node name="Game Manager" type="Node" parent="."]
 script = ExtResource("1_lk7go")
@@ -13,9 +34,34 @@ conveyer_speed = 500.0
 
 [node name="Bolt Manager" type="Node" parent="Game Manager"]
 script = ExtResource("2_1hj1a")
+spawn_pos = Vector2(-500, 50)
+target_pos = Vector2(0, -110)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Game Manager"]
 
 [node name="Timer" type="Timer" parent="Game Manager"]
+
+[node name="Input Manager" type="Node2D" parent="."]
+script = ExtResource("4_82pw2")
+
+[node name="Detector" type="Area2D" parent="Input Manager"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Input Manager/Detector"]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(45.065, 135.195)
+shape = SubResource("RectangleShape2D_wsy5y")
+
+[node name="Bot_Fridge" type="Node2D" parent="."]
+position = Vector2(0, 135)
+script = ExtResource("5_yj6yf")
+texture_open = ExtResource("5_2y8p8")
+texture_closed = ExtResource("7_d7gj5")
+target_pos = Vector2(0, 135)
+start_pos = Vector2(-500, 135)
+end_pos = Vector2(500, 135)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bot_Fridge"]
+position = Vector2(83, -135)
+texture = ExtResource("5_2y8p8")
 
 [connection signal="timeout" from="Game Manager/Timer" to="Game Manager/Bolt Manager" method="Spawn"]
