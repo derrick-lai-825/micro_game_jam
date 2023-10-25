@@ -1,23 +1,46 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnkdmngwtdn1j"]
+[gd_scene load_steps=28 format=3 uid="uid://cnkdmngwtdn1j"]
 
-[ext_resource type="Texture2D" uid="uid://c7ykuvbbxkmry" path="res://art/0392959a2afab47ebbf9b4f50bdd95d1.jpg" id="1_7ks4s"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="1_37vpm"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_lk7go"]
+[ext_resource type="Texture2D" uid="uid://1863arp4h37y" path="res://art/background.png" id="1_wpmfu"]
 [ext_resource type="Script" path="res://scripts/BoltsManager.gd" id="2_1hj1a"]
+[ext_resource type="Texture2D" uid="uid://c6c4167pxaov4" path="res://art/cat bot.png" id="3_myy2l"]
 [ext_resource type="Script" path="res://scripts/InputManager.gd" id="4_82pw2"]
+[ext_resource type="Script" path="res://scenes/LevelManager.gd" id="4_t1lch"]
 [ext_resource type="Texture2D" uid="uid://h1efabupseut" path="res://art/fridge bot_0.png" id="5_2y8p8"]
+[ext_resource type="AudioStream" uid="uid://dgh5x0ky4hjpk" path="res://sounds/Scrw Yourself OST.wav" id="5_n88qw"]
 [ext_resource type="Script" path="res://scripts/Bot.gd" id="5_yj6yf"]
 [ext_resource type="Texture2D" uid="uid://cxh7den7gljus" path="res://art/fridge bot_1.png" id="7_d7gj5"]
+[ext_resource type="Texture2D" uid="uid://ujff56tduajc" path="res://art/conveyor.png" id="9_867cb"]
+[ext_resource type="Texture2D" uid="uid://c4nlknmorxr63" path="res://art/leg_bot_0.png" id="12_6adew"]
+[ext_resource type="Script" path="res://scenes/SoundManager.gd" id="13_1igr6"]
+[ext_resource type="AudioStream" uid="uid://brxss61u3t7nv" path="res://sounds/Throw_V1.wav" id="13_4k2v3"]
+[ext_resource type="Texture2D" uid="uid://c503cmerl36a4" path="res://art/leg_bot_1.png" id="13_28rhx"]
+[ext_resource type="Texture2D" uid="uid://coppswcug7d1w" path="res://art/float_bot_0.png" id="14_cc1ok"]
+[ext_resource type="AudioStream" uid="uid://ctdhqngx4kj1o" path="res://sounds/Pass_V1.wav" id="15_4xjqa"]
+[ext_resource type="AudioStream" uid="uid://dflib6rohejbu" path="res://sounds/Fail_V1.wav" id="15_6y08p"]
+[ext_resource type="Texture2D" uid="uid://dn2hqe20bjjar" path="res://art/float_bot_1.png" id="15_7jw7i"]
+[ext_resource type="AudioStream" uid="uid://d36fllau0v3xo" path="res://sounds/Rise_V1.wav" id="16_6oi8r"]
+[ext_resource type="Texture2D" uid="uid://6vedyxnm0f36" path="res://art/arrow.png" id="22_31fcq"]
+[ext_resource type="AudioStream" uid="uid://bmqihkbm8u6xq" path="res://sounds/METAL.wav" id="22_pmt3f"]
+[ext_resource type="AudioStream" uid="uid://bd3w0pe7n5fd7" path="res://sounds/Miss_V1.wav" id="23_5br7u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wsy5y"]
 size = Vector2(0.221902, 20)
 
+[sub_resource type="Gradient" id="Gradient_htpx8"]
+colors = PackedColorArray(0.1785, 0.1785, 0.21, 1, 0.4879, 0.4845, 0.51, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vf1g0"]
+gradient = SubResource("Gradient_htpx8")
+fill_from = Vector2(1, 1)
+
 [node name="Main" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(2, -1)
-scale = Vector2(1.54261, 1.54261)
-texture = ExtResource("1_7ks4s")
+position = Vector2(2.88875, -56)
+scale = Vector2(1.03148, 1.03148)
+texture = ExtResource("1_wpmfu")
 
 [node name="Camera Manager" type="Node2D" parent="."]
 script = ExtResource("1_37vpm")
@@ -25,19 +48,60 @@ NOISE_SHAKE_STRENGTH = Array[float]([10.0, 30.0, 60.0])
 
 [node name="Camera2D" type="Camera2D" parent="Camera Manager"]
 
-[node name="Line2D" type="Line2D" parent="Camera Manager/Camera2D"]
-points = PackedVector2Array(0, 270, 0, -270)
+[node name="Lose_Cat" type="Sprite2D" parent="Camera Manager"]
+visible = false
+modulate = Color(1, 0.254902, 0.278431, 1)
+z_index = 15
+position = Vector2(-90, -189)
+rotation = -0.438078
+scale = Vector2(1.73, 1.73)
+texture = ExtResource("3_myy2l")
+
+[node name="Lose_Fridge" type="Sprite2D" parent="Camera Manager"]
+visible = false
+modulate = Color(1, 0.254902, 0.278431, 1)
+z_index = 15
+position = Vector2(52, 323)
+rotation = 0.790634
+scale = Vector2(2.9929, 2.9929)
+texture = ExtResource("7_d7gj5")
+
+[node name="Lose_Float" type="Sprite2D" parent="Camera Manager"]
+visible = false
+modulate = Color(1, 0.254902, 0.278431, 1)
+z_index = 15
+position = Vector2(40, 6.99999)
+rotation = -0.459022
+scale = Vector2(1.93349, 1.93349)
+texture = ExtResource("14_cc1ok")
+
+[node name="Lose_Leg" type="Sprite2D" parent="Camera Manager"]
+visible = false
+modulate = Color(1, 0.254902, 0.278431, 1)
+z_index = 15
+position = Vector2(25, 76)
+rotation = -0.459022
+scale = Vector2(1.93349, 1.93349)
+texture = ExtResource("13_28rhx")
 
 [node name="Game Manager" type="Node" parent="."]
 script = ExtResource("1_lk7go")
-conveyer_speed = 500.0
+
+[node name="Level Manager" type="Node2D" parent="Game Manager"]
+script = ExtResource("4_t1lch")
+level_easy = Array[int]([12, 16, 20, 24, 28, 30, 36, 38, 44, 48, 52, 56])
+cat_easy = Array[int]([42, 46, 50, 54])
+level_med = Array[int]([4, 6, 8, 12, 16, 20, 22, 24, 28, 30, 32, 36, 38, 40, 44, 46, 48, 50, 52, 54, 56, 58])
+cat_med = Array[int]([49, 51, 53, 55, 57, 59])
+level_hard = Array[int]([4, 6, 8, 12, 16, 20, 22, 24, 26, 27, 28, 30, 32, 36, 38, 40, 42, 43, 44, 45, 46, 48, 49, 50, 52, 53, 54, 56, 58])
+cat_hard = Array[int]([2, 10, 21, 23, 25, 31, 34, 41, 47, 51, 55, 57])
 
 [node name="Bolt Manager" type="Node" parent="Game Manager"]
 script = ExtResource("2_1hj1a")
-spawn_pos = Vector2(-500, 50)
-target_pos = Vector2(0, -110)
+target_pos = Vector2(0, -75)
 
 [node name="Music" type="AudioStreamPlayer2D" parent="Game Manager"]
+stream = ExtResource("5_n88qw")
 
 [node name="Timer" type="Timer" parent="Game Manager"]
 
@@ -52,6 +116,7 @@ scale = Vector2(45.065, 135.195)
 shape = SubResource("RectangleShape2D_wsy5y")
 
 [node name="Bot_Fridge" type="Node2D" parent="."]
+visible = false
 position = Vector2(0, 135)
 script = ExtResource("5_yj6yf")
 texture_open = ExtResource("5_2y8p8")
@@ -59,9 +124,98 @@ texture_closed = ExtResource("7_d7gj5")
 target_pos = Vector2(0, 135)
 start_pos = Vector2(-500, 135)
 end_pos = Vector2(500, 135)
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bot_Fridge"]
-position = Vector2(83, -135)
+position = Vector2(83, -100)
 texture = ExtResource("5_2y8p8")
 
-[connection signal="timeout" from="Game Manager/Timer" to="Game Manager/Bolt Manager" method="Spawn"]
+[node name="Bot_Leg" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 135)
+script = ExtResource("5_yj6yf")
+texture_open = ExtResource("12_6adew")
+texture_closed = ExtResource("13_28rhx")
+target_pos = Vector2(0, 135)
+start_pos = Vector2(-500, 135)
+end_pos = Vector2(500, 135)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Bot_Leg"]
+position = Vector2(0, -188)
+scale = Vector2(0.701232, 0.701232)
+texture = ExtResource("12_6adew")
+region_rect = Rect2(1170, 609.5, 698, 487)
+
+[node name="Bot_Float" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 135)
+script = ExtResource("5_yj6yf")
+texture_open = ExtResource("14_cc1ok")
+texture_closed = ExtResource("15_7jw7i")
+target_pos = Vector2(0, 135)
+start_pos = Vector2(-500, 135)
+end_pos = Vector2(500, 135)
+end_rot = 0.625
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Bot_Float"]
+position = Vector2(0, -188)
+scale = Vector2(0.701232, 0.701232)
+texture = ExtResource("14_cc1ok")
+region_rect = Rect2(1170, 609.5, 698, 487)
+
+[node name="Belt" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(0, 98)
+scale = Vector2(0.333, 0.333)
+texture = ExtResource("9_867cb")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(0, 0, 3840, 540)
+
+[node name="Under" type="Sprite2D" parent="Belt"]
+show_behind_parent = true
+position = Vector2(-18.018, 379.88)
+scale = Vector2(47.2973, 5.20833)
+texture = SubResource("GradientTexture2D_vf1g0")
+
+[node name="Sound Manager" type="Node2D" parent="."]
+script = ExtResource("13_1igr6")
+
+[node name="Throw" type="AudioStreamPlayer2D" parent="Sound Manager"]
+stream = ExtResource("13_4k2v3")
+volume_db = -6.0
+
+[node name="Pass" type="AudioStreamPlayer2D" parent="Sound Manager"]
+stream = ExtResource("15_4xjqa")
+volume_db = -6.0
+
+[node name="Fail" type="AudioStreamPlayer2D" parent="Sound Manager"]
+stream = ExtResource("15_6y08p")
+volume_db = -6.0
+
+[node name="Rise" type="AudioStreamPlayer2D" parent="Sound Manager"]
+stream = ExtResource("16_6oi8r")
+volume_db = -6.0
+
+[node name="Metal" type="AudioStreamPlayer" parent="Sound Manager"]
+stream = ExtResource("22_pmt3f")
+volume_db = -22.317
+
+[node name="Miss" type="AudioStreamPlayer" parent="Sound Manager"]
+stream = ExtResource("23_5br7u")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(36, 194)
+rotation = -1.5708
+scale = Vector2(0.174551, 0.174551)
+texture = ExtResource("22_31fcq")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = -470.0
+offset_top = -263.0
+offset_right = -301.0
+offset_bottom = -202.0
+
+[connection signal="timeout" from="Game Manager/Timer" to="Game Manager/Level Manager" method="OnBeat"]

@@ -1,24 +1,58 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697960616
+::res://::1698224963
+export_presets.cfg::TextFile::-1::1698133809::0::1::::<><>::
 icon.svg::CompressedTexture2D::8097338375600203794::1697940437::1697940450::1::::<><>::
 README.md::TextFile::-1::1697940437::0::1::::<><>::
+WebJamController.gd::GDScript::-1::1698224880::0::1::::<>Node2D<>::
 ::res://addons/::1697940437
 ::res://addons/microgamejamcontroller/::1697940437
 gdachan101.png::CompressedTexture2D::6598500715891477301::1697940437::1697940437::1::::<><>::
 MicrogameJamController.gd::GDScript::-1::1697940437::0::1::::<>Node<>::
 MicrogameJamControllerEditor.gd::GDScript::-1::1697940437::0::1::::<>EditorPlugin<>::
 plugin.cfg::TextFile::-1::1697940437::0::1::::<><>::
-::res://art/::1697962615
+::res://art/::1698121078
 0392959a2afab47ebbf9b4f50bdd95d1.jpg::CompressedTexture2D::7069073420318171690::1697962615::1697962615::1::::<><>::
+arrow.png::CompressedTexture2D::2219455607665630675::1698041862::1698041896::1::::<><>::
+background.png::CompressedTexture2D::1894966656460180848::1698023108::1698023162::1::::<><>::
 bolt.png::CompressedTexture2D::4406266091021463457::1697940437::1697940437::1::::<><>::
+cat bot.png::CompressedTexture2D::6954633177474960111::1698023108::1698023129::1::::<><>::
+conveyor.png::CompressedTexture2D::1422670410938052132::1698023108::1698023262::1::::<><>::
+float_bot_0.png::CompressedTexture2D::5787394903332637814::1698038713::1698038716::1::::<><>::
+float_bot_1.png::CompressedTexture2D::8127909062325887597::1698038670::1698038749::1::::<><>::
 fridge bot_0.png::CompressedTexture2D::545247526486641931::1697959504::1697959507::1::::<><>::
 fridge bot_1.png::CompressedTexture2D::6403583948127859926::1697959504::1697959507::1::::<><>::
-::res://scenes/::1697962564
-bolt.tscn::PackedScene::6724060129818144289::1697962564::0::1::::<><>::uid://b31os86lhgj3f::::res://art/bolt.png
-main.tscn::PackedScene::5706144385823860921::1697962564::0::1::::<><>::res://scripts/CameraManager.gd<>res://scripts/GameManager.gd<>res://scripts/BoltsManager.gd<>res://scripts/InputManager.gd<>uid://h1efabupseut::::res://art/fridge bot_0.png<>res://scripts/Bot.gd<>uid://cxh7den7gljus::::res://art/fridge bot_1.png
-::res://scripts/::1697962563
-BoltsManager.gd::GDScript::-1::1697962563::0::1::::<>Node<>::
-Bot.gd::GDScript::-1::1697961890::0::1::::<>Node2D<>::
-CameraManager.gd::GDScript::-1::1697953129::0::1::::<>Node2D<>::
-GameManager.gd::GDScript::-1::1697962513::0::1::::<>Node<>::
-InputManager.gd::GDScript::-1::1697959061::0::1::::<>Node2D<>::
+leg_bot_0.png::CompressedTexture2D::6835841190552341638::1698038163::1698038168::1::::<><>::
+leg_bot_1.png::CompressedTexture2D::6931820405011596489::1698038149::1698038168::1::::<><>::
+sparks.png::CompressedTexture2D::9009417406270076476::1698121074::1698121078::1::::<><>::
+Untitled80 (1).png::CompressedTexture2D::5644466173542124935::1698023108::1698023110::1::::<><>::
+::res://scenes/::1698224963
+bolt.tscn::PackedScene::6724060129818144289::1698133780::0::1::::<><>::uid://b31os86lhgj3f
+cat_bolt.tscn::PackedScene::4418628162442498546::1698133780::0::1::::<><>::uid://c6c4167pxaov4
+LevelManager.gd::GDScript::-1::1698040620::0::1::::<>Node2D<>::
+main.tscn::PackedScene::5706144385823860921::1698133780::0::1::::<><>::res://scripts/CameraManager.gd<>res://scripts/GameManager.gd<>uid://1863arp4h37y
+SoundManager.gd::GDScript::-1::1698119044::0::1::::<>Node2D<>::
+spark.tscn::PackedScene::9175106596323638012::1698133776::0::1::::<><>::uid://d1mh12m3qqk17
+WebJamController.tscn::PackedScene::3172727481688713862::1698224969::0::1::::<><>::res://WebJamController.gd
+::res://Scr#w Yourself Web/::1698133992
+index.apple-touch-icon.png::CompressedTexture2D::7344925700371545780::1698133808::1698133992::1::::<><>::
+index.icon.png::CompressedTexture2D::8765770625250347539::1698133808::1698133992::1::::<><>::
+index.png::CompressedTexture2D::6748134183923423613::1698133808::1698133992::1::::<><>::
+::res://Scr#w Yourself [Download]/::1698041783
+::res://Scr#w Yourself [Download]/Scr#w Yourself/::1698041804
+Scr#w Yourself.apple-touch-icon.png::CompressedTexture2D::1390385649444498789::1698041576::1698041804::1::::<><>::
+Scr#w Yourself.icon.png::CompressedTexture2D::4954133002504395994::1698041576::1698041804::1::::<><>::
+Scr#w Yourself.png::CompressedTexture2D::4421537786819282097::1698041576::1698041804::1::::<><>::
+::res://scripts/::1698133766
+BoltsManager.gd::GDScript::-1::1698133766::0::1::::<>Node<>::
+Bot.gd::GDScript::-1::1698037787::0::1::::<>Node2D<>::
+CameraManager.gd::GDScript::-1::1698039082::0::1::::<>Node2D<>::
+GameManager.gd::GDScript::-1::1698039180::0::1::::<>Node<>::
+InputManager.gd::GDScript::-1::1698130291::0::1::::<>Node2D<>::
+::res://sounds/::1698119315
+Fail_V1.wav::AudioStreamWAV::7533403601431306730::1698034463::1698034466::1::::<><>::
+METAL.wav::AudioStreamWAV::3262215615282364810::1698119310::1698119315::1::::<><>::
+Miss_V1.wav::AudioStreamWAV::2656171005911317338::1698119108::1698119114::1::::<><>::
+Pass_V1.wav::AudioStreamWAV::6113076814579391526::1698034463::1698034466::1::::<><>::
+Rise_V1.wav::AudioStreamWAV::9188869190716676164::1698034462::1698034466::1::::<><>::
+Scrw Yourself OST.wav::AudioStreamWAV::7596709669890010164::1698026266::1698026284::1::::<><>::
+Throw_V1.wav::AudioStreamWAV::3628238433378790311::1698034462::1698034466::1::::<><>::

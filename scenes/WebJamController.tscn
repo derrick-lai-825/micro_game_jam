@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://blg5mf7cbi2lu"]
+
+[ext_resource type="Script" path="res://scripts/WebJamController.gd" id="1_wgu4t"]
+
+[node name="WebJamController" type="Node2D"]
+script = ExtResource("1_wgu4t")

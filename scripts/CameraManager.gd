@@ -18,6 +18,12 @@ var noise_i: float = 0.0
 var tween : Tween
 var shake_strength: float = 0.0
 
+@onready var lose_cat = $Lose_Cat
+@onready var lose_fridge = $Lose_Fridge
+@onready var lose_float = $Lose_Float
+@onready var lose_leg = $Lose_Leg
+
+
 func _ready() -> void:
 	rand.randomize()
 	# Randomize the generated noise
@@ -48,6 +54,26 @@ func Zoom() -> void:
 	if tween:
 		tween.kill()
 	tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
-	tween.tween_property(camera_2d, "zoom", Vector2.ONE * 1.1, 9.25)
+	tween.tween_property(camera_2d, "zoom", Vector2.ONE * 1.1, 11.25)
 	tween.tween_property(camera_2d, "zoom", Vector2.ONE, 0.25)
+	pass
+	
+func Cat() -> void:
+	apply_noise_shake(2)
+	lose_cat.visible = true
+	pass
+	
+func Bot() -> void:
+	apply_noise_shake(2)
+	var bot
+	# match MicrogameJamController.GetDifficulty():
+	match WebJamController.GetDifficulty():
+		1:
+			bot = lose_float
+		2:
+			bot = lose_fridge
+		3:
+			bot = lose_leg
+	
+	bot.visible = true
 	pass

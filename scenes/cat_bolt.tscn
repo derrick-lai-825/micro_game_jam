@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b37ofpjc6nty5"]
+
+[ext_resource type="Texture2D" uid="uid://c6c4167pxaov4" path="res://art/cat bot.png" id="1_40ohs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcilw"]
+radius = 28.8844
+
+[node name="cat_bolt" type="Node2D"]
+scale = Vector2(0.97, 0.97)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -50.8165)
+scale = Vector2(0.234558, 0.234558)
+texture = ExtResource("1_40ohs")
+region_enabled = true
+region_rect = Rect2(742.623, 469.492, 503.477, 649.609)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xcilw")

@@ -30,13 +30,15 @@ func Enter():
 	tween.tween_property(sprite, "texture", texture_open, 0)
 	tween.tween_callback(camera_manager.apply_noise_shake)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func Leave():
 	sprite.texture = texture_closed
 	camera_manager.apply_noise_shake(2)
 	var tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
 	tween.tween_property(sprite, "rotation", end_rot, tween_time)
 	tween.parallel().tween_property(self, "position", end_pos, tween_time)
+	
+func Mad():
+	sprite.texture = texture_closed
+	var tween = create_tween().set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "scale", Vector2(1.5, 1.5), 0.1)
+	tween.parallel().tween_property(sprite, "modulate", Color(1, 0.2, 0.2, 1), 0.1)
